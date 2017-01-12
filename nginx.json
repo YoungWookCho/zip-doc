@@ -1,13 +1,12 @@
 {
-	"listen": 80,
 	"server_name": [
-		"example.com",
-		"www.example.com"
+		"localhost"
 	],
+	"listen": 83,
 	"statics": [
 		{
 			"location": "/",
-			"root": "/apps/pkjs-webapp-starter/dist"
+			"root": "/Users/hb/hanbit/webstormpjt/zip-doc/dist"
 		}
 	],
 	"proxys": [
@@ -17,7 +16,7 @@
 			"backends": [
 				{
 					"address": "127.0.0.1",
-					"port": 8080
+					"port": 8380
 				}
 			]
 		}
