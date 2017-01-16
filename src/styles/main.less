@@ -2,16 +2,45 @@
 @import 'common.css';
 
 .zd-contents {
-	width: 100%;
+	@wrapper();
 	position: relative;
+	background: no-repeat;
+	background-size: 100%;
+	padding-top: 42.5px;
 }
-.back-img {
-	position: absolute;
-	top:0px;
-	left: 0px;
-	right: 0px;
-	height: 500px;
-	background-size: 100% 100%;
-	z-index: 100;
+.main-wrapper {
+	@wrapper-under();
 
 }
+.main-copy {
+	height: 376px;
+	text-align: left;
+	padding:  42.5px 2% 0px 2%;
+}
+.img-pen {
+	margin-left: 200px;
+}
+.main-copy-title {
+	font-size:30px;
+	margin-bottom: 30px;
+
+}
+.main-copy-desc {
+	font-size: 16px;
+	margin-bottom: 25px;
+}
+.main-copy-btn {
+	width: 444px;
+	text-align: center;
+	background-color: @color-mango;
+	color:white;
+	font-size: 16px;
+	line-height: 40px;
+	height: 40px;
+}
+.main-gallery {
+	@wrapper-under();
+	padding:  0px 2%;
+}
+
+

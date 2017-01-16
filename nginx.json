@@ -5,8 +5,8 @@
 	"listen": 83,
 	"statics": [
 		{
-			"location": "/",
-			"root": "/Users/hb/hanbit/webstormpjt/zip-doc/dist"
+			"location": "/youngwookPjt/habit/zip-doc/dist",
+			"root": ""
 		}
 	],
 	"proxys": [
