@@ -48,6 +48,17 @@ define([
 			$(".header-details").fadeOut(10);
 		});
 	}
+	/* 메뉴바 링크들~~아직 갤러리만함*/
+	$(".header-menu>ul>li").on("click", function() {
+		if ($(this).hasClass("header-menu-gallery")) {
+			$(location).attr("href", "gallery.html");
+		}
+	});
+	/* 로고클릭시 메인페이지 가기*/
+	$(".main-logo").on("click", function() {
+			$(location).attr("href", "/");
+	});
+
 	mainLogoEnter();
 	mainLogoLeave();
 	detailsEnter();

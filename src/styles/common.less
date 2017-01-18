@@ -21,10 +21,13 @@ ul {
 	width: 100%;
 	min-height: 100%;
 	padding-bottom: 336px;
-	padding-top: 160px;
+	padding-top: 161px;
 }
 .zd-contents {
 	position: relative;
+}
+.wrapper {
+	@wrapper-under();
 }
 
 .overflow-text {
@@ -63,6 +66,7 @@ ul {
 	margin:0px 8px;
 	display: inline-block;
 	line-height: 250%;
+	cursor: pointer;
 }
 
 .header-info-title {
@@ -142,6 +146,7 @@ ul {
 	text-align: center;
 	color: @color-font-main;
 	font-size: 14px;
+	cursor: pointer;
 }
 
 .header-menu>ul>li:hover {
@@ -217,7 +222,7 @@ ul {
 	left: 0px;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(210,210,210,0.2);
+	background-color: @color-hover-gray;
 }
 
 
