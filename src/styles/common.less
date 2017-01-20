@@ -20,8 +20,8 @@ ul {
 	position: relative;
 	width: 100%;
 	min-height: 100%;
-	padding-bottom: 336px;
-	padding-top: 161px;
+	padding-bottom: 322px;
+	padding-top: 160px;
 }
 .zd-contents {
 	position: relative;
@@ -228,25 +228,35 @@ ul {
 
 
 @header-details-bar-height: 61px;
-.header-details-bar {
-	display: none;//이건 바뀌어야함
-	position: relative;
+
+.header-details-bar-wrapper {
 	width: 100%;
 	height: @header-details-bar-height;
+	@wrapper();
 	background-color: @color-bar;
-	z-index: 100;
+}
+.header-details-bar {
+	@wrapper-under();
+	padding: 0px 2%;
+	/*display: none;//이건 바뀌어야함*/
+	text-align: left;
 }
 
 .header-details-bar>ul {
-	list-style: circle ;
-	color: #999999;
-	@abs-vmiddle();
-	right: 20px;
+	color: @color-brown;
 }
 .header-details-bar>ul>li {
 	display: inline-block;
-	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	line-height: 1.3;
+	margin-top: 21px;
+	border-right: solid 1px @color-main-border;
 }
+.header-details-bar>ul>li:last-child {
+	border-right: none;
+}
+
 
 .header-menu-fixed {
 	position: fixed;
@@ -257,99 +267,32 @@ ul {
 
 
 
-/* 집 정보 리스트의 커먼 속성*/
+/*하단 페이지 넘기기*/
 
-.common-list {
-	position: relative;
-	width: 100%;
-	/* 전체 리스트의 높이
-    height: @best-height;*/
-	/*전체 넘치는 것을 보여줄지
-    overflow: hidden;*/
+.common-pages {
+	padding: 0px 2%;
 }
-.common-list>ul {
-	height: 100%;
-	/*리스트들의 전체 크기
-    width: 1000% ;*/
-	/* 위치 고정하기 위해서
-    position: absolute;*/
+.common-pages>ul {
+	padding: 20px 10px;
 }
-.common-list>ul>li {
-	display: inline-block;
-	/*리스트의 실제 너비사이즈(필수)
-    width: @best-list-width;*/
-	height: 100%;
-	margin-right: 10px;
+.common-pages>ul>li {
 
-}
-.common-list-form {
-	height: 100%;
-	position: relative;
-}
-
-.common-list-img {
-	background-size: cover;
-	/*리스트의 실제 너비사이즈(필수)
-    width: @best-list-width;*/
-	height: calc(~"100% - 45%");
-	border-top-left-radius: 7px ;
-	border-top-right-radius: 7px ;
-	border: @color-main-border 1px solid;
-
-}
-
-.common-list-text {
-	/*리스트의 실제 너비사이즈(필수)
-    width: @best-list-width;*/
-	height: calc(~"100% - 55%");
-	border-bottom-left-radius: 7px ;
-	border-bottom-right-radius: 7px ;
-	border: @color-main-border 1px solid;
-	border-top: none;
-	text-align: left;
-	padding: 20px;
-	background-color: white;
 	color: @color-font-light;
-}
-.common-list-text>div {
-	padding: 3px 0px;
-}
-.common-list-desc>div {
 	display: inline-block;
-	border: solid 1px @color-main-border;
-	border-radius: 3px;
-	margin-right: 3px;
-}
-.common-list-title {
-	color: @color-mango;
+	padding: 5px 13px;
 }
 
-.common-list-favor {
-	position: absolute;
-	width: calc(~ "100% / 5" );
-	height: 30px;
-	top: calc(~"100% - 45%");
-	right: 0px;
-	transform: translateY(-100%);
-	color: white;
-	background-color: rgba(255,30,0,0.5);
-	text-align: center;
-	font-size: 16px;
-	cursor: pointer;
+.page-active {
+	border-bottom: 1px solid @color-font-main;
+	border-top: 1px solid @color-font-main;
 }
-.common-list-favor>div{
-	display: inline-block;
-	padding-right: 3px;
-	line-height: 30px;
+.pages {
+	font-size: 13px;
 }
-.common-list-favor>div:last-child {
-	padding: 0px;
+.page-navi {
+	font-size: 10px;
+
 }
-
-
-/* 집 정보 리스트의 커먼 속성 End*/
-
-
 
 
 

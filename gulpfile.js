@@ -205,7 +205,14 @@ gulp.task('html:static', function() {
 
 gulp.task('html:dynamic', function() {
     var options = {
-        batch: [dirs.src + '/templates/partials']
+        batch: [dirs.src + '/templates/partials'],
+		helpers: {
+			set: function(options) {
+				for (var attr in options.hash) {
+					this[attr] = options[attr];
+				}
+			}
+		}
     };
 
     return gulp.src([dirs.src + '/templates/**/*.hbs',

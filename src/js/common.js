@@ -53,6 +53,9 @@ define([
 		if ($(this).hasClass("header-menu-gallery")) {
 			$(location).attr("href", "gallery.html");
 		}
+		else if ($(this).hasClass("header-menu-community")) {
+			$(location).attr("href", "comunity.html");
+		}
 	});
 	/* 로고클릭시 메인페이지 가기*/
 	$(".main-logo").on("click", function() {
