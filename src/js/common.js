@@ -56,10 +56,27 @@ define([
 		else if ($(this).hasClass("header-menu-community")) {
 			$(location).attr("href", "comunity.html");
 		}
+		else if ($(this).hasClass("header-menu-magazine")) {
+			$(location).attr("href", "magazine.html");
+		}
+		else if ($(this).hasClass("header-menu-partners")) {
+			$(location).attr("href", "partners.html");
+		}
+		else if ($(this).hasClass("header-menu-estimate")) {
+			$(location).attr("href", "estimate.html");
+		}
+		else if ($(this).hasClass("header-menu-store")) {
+			$(location).attr("href", "store.html");
+		}
 	});
 	/* 로고클릭시 메인페이지 가기*/
 	$(".main-logo").on("click", function() {
 			$(location).attr("href", "/");
+	});
+	/* 헤더 디테일스바 색상변경*/
+	$(".header-details-bar>ul>li").on("click", function() {
+		$(".header-details-bar>ul>li").removeClass("header-details-bar-active");
+		$(this).addClass("header-details-bar-active");
 	});
 
 	mainLogoEnter();

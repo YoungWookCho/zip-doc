@@ -1,30 +1,12 @@
-{{set pageId="abcd"}}
+{{set pageId="community"}}
 {{> header title='Zip-Doc' cssName='comunity'}}
-<div class="header-details-bar-wrapper">
-	<div class="header-details-bar">
-		<ul class="a">
-			<li class="curious-clicker">궁금해요</li>
-			<li class="myroom-clicker">내방어때</li>
-			<li class="review-clicker">집닥후기</li>
-		</ul>
-	</div>
-</div>
+{{> sub-header }}
 <div class="zd-contents">
 	<div class="zd-contents-under">
-
-		<section class="curious">
-			<div class="curious-title">
-				<div class="title-box">
-					<img src="img/index_icon_comm_qna.png">
-					<span class="title-box-title"> 인테리어 무엇이든 물어보세요~</span><br>
-					<span class="curious-box-desc">인테리어에 관한것이라면, 어떤 사소한 질문도 괜찮아요.
-						집닥과 집닥 파트너스의 전문가들이 속 시원히 알려드립니다.<br>
-						나만 알고 있는 경험과 노하우가 있다면 도움이
-						필요한 분들에게 나누어 주세요.</span>
-				</div>
-				<div class="question-btn">
-					질문하기
-				</div>
+		<section class="curious community-active">
+			{{> sub-sub-header num="0"}}
+			<div class="sub-btn">
+				질문하기
 			</div>
 			<div class="curious-search-form">
 				<div class="search-form">
@@ -81,6 +63,11 @@
 			</div>
 		</section>
 		<section class="myroom">
+
+			{{> sub-sub-header num="1"}}
+			<div class="sub-btn">
+				글쓰기
+			</div>
 			<div class="common-sort">
 				<ul>
 					<li>
@@ -308,6 +295,10 @@
 
 		</section>
 		<section class="review">
+			{{> sub-sub-header num="2"}}
+			<div class="sub-btn">
+				글쓰기
+			</div>
 			<div class="review-contents">
 				<div class="review-title">
 					<div class="review-title-num">번호</div>

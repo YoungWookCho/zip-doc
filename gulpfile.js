@@ -209,8 +209,17 @@ gulp.task('html:dynamic', function() {
 		helpers: {
 			set: function(options) {
 				for (var attr in options.hash) {
-					this[attr] = options[attr];
+					this[attr] = options.hash[attr];
 				}
+			},
+			eq: function(type1, type2) {
+				return type1 === type2;
+			},
+			getObj: function(key) {
+				return this[key];
+			},
+			getMenuInfo: function(pageId, num, key) {
+				return this[pageId][num].subTitle[key];
 			}
 		}
     };

@@ -11,7 +11,56 @@
       "src": "src"
     },
     "globals": {
-      "lang": "ko"
+      "lang": "ko",
+
+      "community": [
+        {
+          "class": "curious-clicker",
+          "title": "궁금해요",
+          "subTitle": {
+            "titleImg": "img/index_icon_comm_qna.png",
+            "titleTitle": " 인테리어 무엇이든 물어보세요~",
+            "titleDesc1": "인테리어에 관한것이라면, 어떤 사소한 질문도 괜찮아요. 집닥과 집닥 파트너스의 전문가들이 속 시원히 알려드립니다.",
+            "titleDesc2": "나만 알고 있는 경험과 노하우가 있다면 도움이 필요한 분들에게 나누어 주세요."
+          }
+        },
+        {
+          "class": "myroom-clicker",
+          "title": "내방어때",
+          "subTitle": {
+            "titleImg": "img/index_icon_comm_photo.png",
+            "titleTitle": "나의 셀프 인테리어 이야기",
+            "titleDesc1": "혼자 보기 아까운, 정성과 애정이 가득 담긴 나만의 공간을 자랑하세요.",
+            "titleDesc2":"알려주고 싶은 인테리어 팁이나 노하우가 있다면 모두와 공유해 보세요."
+          }
+        },
+        {
+          "class": "review-clicker",
+          "title": "집닥후기",
+          "subTitle": {
+            "titleImg": "img/index_icon_comm_qna.png",
+            "titleTitle": " 인테리어 이렇게 했어요",
+            "titleDesc1": "인테리어를 하셨거나 준비중이신가요? 인테리어를 하며 경험하고 느낀 후기를 남겨주세요.",
+            "titleDesc2":"현재 인테리어를 하고 계신 분들, 혹은 앞으로 인테리어를 계획하고 계신 분들에게 많은 도움이 될거에요."
+          }
+        }
+      ],
+
+      "magazine":[
+        {
+          "title":"인테리어 팁"
+        },
+        {
+          "title":"집닥맨 다이어리"
+        },
+        {
+          "title":"집닥소식"
+        },
+        {
+          "title": "집닥이벤트"
+        }
+      ]
+
     }
   },
   "scripts": {
