@@ -2,15 +2,15 @@ require([
 	"common",
 ], function() {
 	$(".header-details-bar>ul>li").on("click", function() {
-		$(".zd-contents-under>section").removeClass("community-active");
+		$(".zd-contents-under>section").removeClass("common-active");
 		if($(this).hasClass("curious-clicker")) {
-			$(".curious").addClass("community-active");
+			$(".curious").addClass("common-active");
 		}
 		else if($(this).hasClass("myroom-clicker")) {
-			$(".myroom").addClass("community-active");
+			$(".myroom").addClass("common-active");
 		}
 		else if($(this).hasClass("review-clicker")) {
-			$(".review").addClass("community-active");
+			$(".review").addClass("common-active");
 		}
 	});
 });

@@ -1,14 +1,104 @@
+{{set pageId="partners"}}
 {{> header title='Zip-Doc' cssName='partners'}}
-<div class="header-details-bar-wrapper">
-	<div class="header-details-bar">
-		<ul>
-			<li class="curious-clicker header-details-bar-active">궁금해요</li>
-			<li class="myroom-clicker">내방어때</li>
-			<li class="review-clicker">집닥후기</li>
-		</ul>
-	</div>
-</div>
-<div class="zd-contents">
+{{> sub-header }}
+<div class="zd-contents-wrapper">
+	<div class="zd-contents">
+		<section class="partners-index">
+			{{> sub-sub-header num="0"}}
+			<div class="partners-index-contents">
+				<div class="partners-best">
+					<div class="partners-best-title">베스트 파트너스</div>
+					<div class="partners-best-list">
+						<div class="gallery-partner-list-wrapper">
+							<ul class="gallery-partner-list">
+								<li>
+									<div class="partner-list-img" style="background-image: url('img/540x360_20170109145319903_ic9M6MsVSP.jpg')">
+									</div>
+									<div class="partner-list-tag">
+										<div class="partner-list-tag-company-img" style="background-image: url('img/20160927112847589_5wMj1TcJak.jpg')">
+										</div>
+										<div class="partner-list-tag-company">
+											장식가
+										</div>
+									</div>
+									<div class="partner-list-evaluation">
+										최우수
+									</div>
+								</li>
+								<li>
+									<div class="partner-list-img" style="background-image: url('img/540x360_20170110120307388_fve0lNGvHT.jpg')">
 
+									</div>
+									<div class="partner-list-tag">
+										<div class="partner-list-tag-company-img" style="background-image: url('img/20160927113258399_nTuGdns3Y4.jpg')">
+										</div>
+										<div class="partner-list-tag-company">
+											장식가
+										</div>
+									</div>
+									<div class="partner-list-evaluation">
+										최우수
+									</div>
+								</li>
+								<li>
+									<div class="partner-list-img" style="background-image: url('img/540x360_20170110140534799_wKTAdVzcHV.jpg')">
+									</div>
+									<div class="partner-list-tag">
+										<div class="partner-list-tag-company-img" style="background-image: url('img/20160927113316183_9Co7LKwR9y.jpg')">
+										</div>
+										<div class="partner-list-tag-company">
+											장식가
+										</div>
+									</div>
+									<div class="partner-list-evaluation">
+										최우수
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="partners-search-box">
+					<div class="search-box-select">
+						<select id="region" >
+							<option selected>--시/도--</option>
+							<option >서울</option>
+							<option >경기</option>
+							<option>부산</option>
+							<option >대구</option>
+							<option >인천</option>
+							<option >광주</option>
+							<option >대전</option>
+							<option >울산</option>
+							<option >강원</option>
+							<option >충북</option>
+							<option >충남</option>
+							<option >전북</option>
+							<option >전남</option>
+							<option >경북</option>
+							<option >경남</option>
+							<option >제주특별자치도</option>
+							<option >세종특별자치시</option>
+						</select>
+					</div>
+					<div class="search-box-input">
+						<input type="text">
+					</div>
+					<div class="search-box-btn">검색</div>
+				</div>
+				<div class="partners-list-box">
+					<div class="partners-list-title">파트너스 리스트</div>
+					<div class="partners-list">
+
+					</div>
+				</div>
+			</div>
+
+		</section>
+		<section class="partners-inquire">
+
+		</section>
+
+	</div>
 </div>
 {{> footer jsName='partners'}}
