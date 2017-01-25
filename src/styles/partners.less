@@ -7,6 +7,10 @@
 }
 .zd-contents {
 	@wrapper-under();
+
+}
+.partners-index {
+	display: none;
 	padding: 0px 2%;
 }
 .partners-best {
@@ -22,14 +26,12 @@
 .gallery-partner-list-wrapper {
 	padding:  15px 0px 0px 0px;
 	position: relative;
-	height: 312px;
 
 }
 .gallery-partner-list>li {
-	float: left;
+	display: inline-block;
 	width: calc(~"(100% / 3) - 4px");
-	margin: 0px;
-	margin: 0px 2px;
+	margin: 10px 2px;
 	position: relative;
 }
 .partner-list-img {
@@ -70,6 +72,7 @@
 .partners-search-box {
 	width: 100%;
 	height: 50px;
+	margin: 40px 0px;
 }
 .partners-search-box>div {
 	display: inline-block;
@@ -99,10 +102,91 @@
 	padding: 10px;
 }
 
+.partners-inquire {
+	display: none;
+	padding: 0px 2%;
+	background-color: white;
+	border-right: 1px solid @color-main-border;
+	border-left: 1px solid @color-main-border;;
+}
+.font-color-light {
+	color: @color-font-light;
+}
+.font-title-size {
+	font-size: 20px;
+}
+.partners-inquire-title {
+	font-size: 30px;
+	font-weight: bold;
+
+}
+.partners-inquire-btn {
+	padding: 20px 40px;
+	line-height: normal;
+	height: auto;
+	font-size: 18px;
+	background-color: @color-mango;
+	width: 300px;
+	color: white;
+
+	@margin-auto-width();
+}
+.partners-section2,
+.partners-section4,
+.partners-section3,
+.partners-section1 {
+	padding: 30px;
+
+}
+
+.partners-section4 {
+	margin-bottom: 0px;
+}
+.partners-section4,
+.partners-section3,
+.partners-section2 {
+	border-top: 1px solid @color-main-border;
+	margin: 10px 0px;
+}
+.partners-section2>ul>li {
+	display: inline-block;
+}
+.partners-section3>ul>li {
+	display: inline-block;
+	width: 100%/3;
+	vertical-align: top;
+	padding: 0px 10px;
+}
+.partners-section4>ul>li {
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+	padding: 0px 10px;
+}
 
 
-
-
+.partners-inquire-desc,
+.partners-inquire-title,
+.partners-section1>img {
+	margin-bottom: 30px;
+}
+.partners-section2>ul>li {
+	text-align: left;
+	vertical-align: top;
+	padding-right: 50px;
+}
+.partners-img-box {
+	height: 110px;
+}
+.desc-text-left {
+	text-align: left;
+}
+.partners-section4>ul>li>.font-color-light{
+	margin-bottom: 20px;
+}
+.partners-section2-desc {
+	width: 95%;
+}
 .common-active {
 	display: block;
 }
