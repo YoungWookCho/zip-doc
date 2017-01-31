@@ -1,8 +1,21 @@
 require([
 	"common",
 ], function() {
-	/* 견적 셀렉트 박스들*/
+	/* 메뉴바 클릭 컨텐츠 변경*/
+	$(".header-details-bar>ul>li").on("click", function() {
+		$(".zd-contents>section").removeClass("common-active");
+		if($(this).hasClass("estimate-apply-clicker")) {
+			$(".estimate-apply").addClass("common-active");
+		}
+		else if($(this).hasClass("estimate-now-clicker")) {
+			$(".estimate-now").addClass("common-active");
+		}
+		else if($(this).hasClass("estimate-confirm-clicker")) {
+			$(".estimate-confirm").addClass("common-active");
+		}
+	});
 
+	/* 견적 셀렉트 박스들*/
 	var spaceSelected=$("#estimate-select-space>option:selected").val();
 	/* 견적 step-1 옵션*/
 	/* 견적 step-1 공간 spaceSelected*/
@@ -61,6 +74,7 @@ require([
 			$(".step-2-circle").addClass("circle-active");
 		}
 	});
+
 	/* 시선택한것 나타내준것 간단하게*/
 	var siSelected=$("#estimate-select-si").val();
 	$("#estimate-select-si").on("change", function() {
@@ -77,14 +91,18 @@ require([
 			}
 			if( nowStep === 3 ) {
 				$(".estimate-next").html("다음 &gt;");
+				$( ".adder-step-4").hide();
+			}
+			if ( nowStep ===4 ) {
+				$( ".adder-step-4").show();
+				$(".estimate-next").html("이 단계 건너뛰기 &gt;");
 			}
 			$(".step-"+nowStep).addClass("estimate-active");
 	});
 
-	/* 견적 step-1 버튼 다음 눌렀을 때*/
+	/* nextStep 넘어가기 위함 함수들*/
 	var goNext=1;
-	$(".estimate-next").on("click", function() {
-		/* step1*/
+	function step1Next() {
 		if ( nowStep === 1) {
 			if ("--공간선택--" === spaceSelected) {
 				alert("공간유형을 선택하세요");
@@ -94,12 +112,12 @@ require([
 				alert("세부유형을 선택하세요");
 				goNext=0;
 			}
-			else if (!("--주거선택--" === descSelected)) {
+			else if (!(("--주거선택--" === descSelected))) {
 				goNext=1;
 			}
 		}
-
-		/* step2*/
+	}
+	function step2Next() {
 		if (nowStep === 2 ) {
 			if ("전체" === siSelected) {
 				alert("시를 선택해주세요");
@@ -109,29 +127,63 @@ require([
 				goNext = 1;
 			}
 		}
-
+	}
+	function step3Next() {
 		if (nowStep === 3 ) {
 			$(".estimate-next").html("이 단계 건너뛰기 &gt;");
+			$( ".adder-step-4").show();
 		}
+	}
+	function step4Next() {
+		if ( nowStep ===4 ) {
+			$( ".adder-step-4").hide();
+			$(".estimate-next").html("견적신청하기 <i class ='fa fa-check'></i>");
+		}
+	}
+	/* 다음 스텝 프로그레스*/
+	function nextStepProgress() {
+		/* 프로그레스바 R*/
+		$(".step"+nowStep+"-right-active").animate({"width": "50%"}, 1000);
+		/* 전의 스텝 삭제*/
+		$(".step-"+nowStep).removeClass("estimate-active");
+		nowStep+=1;
+		console.log("다음: "+nowStep);
+		/* 프로그레스바 L*/
+		$(".step"+nowStep+"-left-active").animate({"width": "50%"}, 1000);
+		/* circle 색상변경*/
+		$(".step-"+nowStep+"-circle").addClass("circle-active");
+		/* 다음 스텝 보이기*/
+		$(".step-"+nowStep).addClass("estimate-active");
+	}
+
+	/* 견적 버튼 다음 눌렀을 때*/
+
+	$(".estimate-next").on("click", function() {
+		/* 다음 스텝으로 넘어가기 전의 조건*/
+		step1Next();
+		step2Next();
+		step3Next();
+		step4Next();
 
 		/* 다음페이지로 넘기기*/
-		if(goNext === 1) {
-			if(nowStep === 1) {
-				/* 버튼*/
-				$(".estimate-pre").addClass("estimate-btn-active");
+		if (goNext === 1) {
+			if (nowStep === 5) {
+				/* 견적신청하면 나오는 페이지 알림*/
 			}
-
-			/* 프로그레스바 R*/
-			$(".step"+nowStep+"-right-active").animate({"width": "50%"}, 1000);
-			/* 전의 스텝 삭제*/
-			$(".step-"+nowStep).removeClass("estimate-active");
-			nowStep+=1;
-			/* 프로그레스바 L*/
-			$(".step"+nowStep+"-left-active").animate({"width": "50%"}, 1000);
-			/* circle 색상변경*/
-			$(".step-"+nowStep+"-circle").addClass("circle-active");
-			/* 다음 스텝 보이기*/
-			$(".step-"+nowStep).addClass("estimate-active");
+			else {
+				if(nowStep === 1) {
+					/* 버튼*/
+					$(".estimate-pre").addClass("estimate-btn-active");
+				}
+				nextStepProgress();
+			}
 		}
+	});
+	/* 스텝4 체크박스시 넘어가기 체크하고 넘어가기*/
+	$(".recommend-checkbox").on("click", function() {
+		$(".recommend-checkbox").prop("checked", false);
+		$(this).prop("checked", true);
+		step4Next();
+		nextStepProgress();
 	});
 });
